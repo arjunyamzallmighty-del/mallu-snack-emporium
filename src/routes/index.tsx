@@ -580,8 +580,8 @@ function Index() {
             <span className="text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-primary">Questions</span>
             <h2 className="mt-3 text-4xl sm:text-5xl">Frequently<br/>Asked</h2>
             <p className="mt-4 text-muted-foreground">Everything you wanted to know about our chips, freshness, and shipping.</p>
-            <a href="#" className="mt-6 inline-flex items-center gap-2 font-bold text-primary">
-              <MessageCircle className="h-5 w-5" /> Still have a question? Chat with us
+            <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-bold text-primary">
+              <MessageCircle className="h-5 w-5" /> Still have a question? Chat on WhatsApp
             </a>
           </div>
           <div className="space-y-3" data-reveal>
