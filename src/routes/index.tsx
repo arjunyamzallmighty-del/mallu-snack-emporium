@@ -21,10 +21,7 @@ import {
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
-import p2 from "@/assets/p2.jpg";
-import p5 from "@/assets/p5.jpg";
 import step from "@/assets/step.jpg";
-import pPakkavada from "@/assets/p_pakkavada.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
 
 const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
