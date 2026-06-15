@@ -27,6 +27,14 @@ import step from "@/assets/step.jpg";
 import pPakkavada from "@/assets/p_pakkavada.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
 
+const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
+const IMG_JAGGERY = "https://buya1chips.com/cdn/shop/files/2_cfc0bf8e-6449-4af9-845c-9edf7014f9cb.jpg?v=1769254459&width=5000";
+const IMG_SHARKARA = "https://www.sharmispassions.com/wp-content/uploads/2022/08/sharkara-upperi5.jpg";
+const IMG_SWEET_BANANA = "https://mylaporeganapathys.com/wp-content/uploads/2025/05/Banana-Chips-Fruit-Pazham-1.jpg";
+const IMG_JACKFRUIT = "https://nikasu.com/wp-content/uploads/2023/08/Jackfruit-chips.jpg";
+const IMG_TOMATO_MURUKKU = "https://s3.ap-south-1.amazonaws.com/media.florafoods.in/wp-content/uploads/2022/04/24030214/Tomato-Chakli-1.jpg";
+const IMG_MURUKKU = "https://blissfulbitesbytay.com/wp-content/uploads/2021/03/Murukku-Featured-Image.jpg";
+const IMG_ACHAPPAM = "https://weaveskart.com/wp-content/uploads/2023/05/Achappam-Mold-Cake-4.jpg";
 const IMG_PAKKAVADA = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAGPHJOp2Fm6dp1fQaJdY7gCeKHc5MgaxDtjoMRcmnV40QAzUIcb5ciY&s=10";
 const IMG_KERALA_MASALA = "https://rajuphaar.srmd.org/cdn/shop/products/BannerWafer_Banner_1.jpg?v=1673849322";
 const IMG_PERI_PERI = "https://5.imimg.com/data5/SELLER/Default/2026/2/582694107/BG/EE/RJ/153621339/peri-peri-banana-chips.png";
