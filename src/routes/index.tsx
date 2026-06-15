@@ -27,14 +27,29 @@ import p3 from "@/assets/p3.jpg";
 import p4 from "@/assets/p4.jpg";
 import p5 from "@/assets/p5.jpg";
 import step from "@/assets/step.jpg";
+import pTomatoMurukku from "@/assets/p_tomato_murukku.jpg";
+import pAchappam from "@/assets/p_achappam.jpg";
+import pMurukku from "@/assets/p_murukku.jpg";
+import pPakkavada from "@/assets/p_pakkavada.jpg";
+import pJackfruit from "@/assets/p_jackfruit.jpg";
+import pSweetBanana from "@/assets/p_sweet_banana.jpg";
+import pMixture from "@/assets/p_mixture.jpg";
+
+const WA_NUMBER = "919446614038";
+const waUrl = (product?: string) => {
+  const msg = product
+    ? `Hi Mallu Snacks! I'd like to order: ${product}. Please share availability and delivery details.`
+    : "Hi Mallu Snacks! I'd like to place an order. Please share the menu and delivery details.";
+  return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Mallu Snacks — Kerala's Favourite Crunch | Authentic Banana Chips" },
-      { name: "description", content: "Premium Kerala banana chips made fresh from traditional recipes. Salted, Peri Peri, Sweet, Jaggery & Masala. Pan India delivery." },
+      { name: "description", content: "Premium Kerala snacks made fresh from traditional recipes. Banana chips, Murukku, Achappam, Sharkara Peratti, Mixture & more. Pan India delivery via WhatsApp." },
       { property: "og:title", content: "Mallu Snacks — Kerala's Favourite Crunch" },
-      { property: "og:description", content: "Authentic Kerala banana chips, freshly fried in coconut oil. Delivered across India." },
+      { property: "og:description", content: "Authentic Kerala snacks, freshly fried in coconut oil. Order on WhatsApp, delivered across India." },
       { property: "og:image", content: hero },
     ],
   }),
@@ -42,11 +57,18 @@ export const Route = createFileRoute("/")({
 });
 
 const products = [
-  { id: 1, name: "Classic Salted", desc: "The timeless Kerala original", price: 199, mrp: 249, rating: 4.9, reviews: 1284, img: p1, badge: "Best Seller", spice: 1 },
-  { id: 2, name: "Peri Peri Fire", desc: "Smoky, spicy, addictive", price: 229, mrp: 279, rating: 4.8, reviews: 942, img: p2, badge: "Hot", spice: 4 },
-  { id: 3, name: "Sweet Jaggery", desc: "Crunchy, naturally sweet", price: 219, mrp: 269, rating: 4.9, reviews: 781, img: p3, badge: "New", spice: 0 },
-  { id: 4, name: "Golden Sharkara", desc: "Glossy jaggery coated bliss", price: 239, mrp: 289, rating: 5.0, reviews: 612, img: p4, badge: "Heritage", spice: 0 },
-  { id: 5, name: "Kerala Masala", desc: "Curry leaves & spice blend", price: 229, mrp: 279, rating: 4.8, reviews: 533, img: p5, badge: "Loved", spice: 3 },
+  { id: 1, name: "Authentic Banana Chips", desc: "Fried fresh in pure Kerala coconut oil", price: 199, mrp: 249, rating: 4.9, reviews: 1284, img: p1, badge: "Best Seller", spice: 1 },
+  { id: 2, name: "Peri Peri Fries", desc: "Smoky, fiery, dangerously addictive", price: 229, mrp: 279, rating: 4.8, reviews: 942, img: p2, badge: "Hot", spice: 4 },
+  { id: 3, name: "Made in Jaggery", desc: "Crunchy chips kissed with pure jaggery", price: 219, mrp: 269, rating: 4.9, reviews: 781, img: p3, badge: "New", spice: 0 },
+  { id: 4, name: "Banana Candy (Sharkara Peratti)", desc: "Glossy jaggery coated heritage bliss", price: 239, mrp: 289, rating: 5.0, reviews: 612, img: p4, badge: "Heritage", spice: 0 },
+  { id: 5, name: "Sweet Banana Chips", desc: "Caramelised gold, melt-in-mouth crunch", price: 219, mrp: 269, rating: 4.9, reviews: 488, img: pSweetBanana, badge: "Loved", spice: 0 },
+  { id: 6, name: "Jackfruit Chips", desc: "Wild jackfruit, golden & gloriously crisp", price: 259, mrp: 319, rating: 4.9, reviews: 421, img: pJackfruit, badge: "Premium", spice: 0 },
+  { id: 7, name: "Tomato Murukku", desc: "Tangy tomato spice, perfect spiral crunch", price: 189, mrp: 239, rating: 4.8, reviews: 356, img: pTomatoMurukku, badge: "Trending", spice: 2 },
+  { id: 8, name: "Classic Murukku", desc: "Hand-twisted Kerala tea-time legend", price: 179, mrp: 229, rating: 4.8, reviews: 612, img: pMurukku, badge: "Classic", spice: 1 },
+  { id: 9, name: "Achappam", desc: "Crisp rose cookies — Kerala festive favourite", price: 199, mrp: 249, rating: 4.9, reviews: 287, img: pAchappam, badge: "Festive", spice: 0 },
+  { id: 10, name: "Pakkavada", desc: "Crunchy ribbon pakoda with curry leaves", price: 189, mrp: 239, rating: 4.8, reviews: 394, img: pPakkavada, badge: "Tea-time", spice: 2 },
+  { id: 11, name: "Kerala Mixture", desc: "The legendary spicy crunchy medley", price: 199, mrp: 249, rating: 4.9, reviews: 728, img: pMixture, badge: "Iconic", spice: 3 },
+  { id: 12, name: "Kerala Masala Chips", desc: "Curry leaves & traditional spice blend", price: 229, mrp: 279, rating: 4.8, reviews: 533, img: p5, badge: "Spicy", spice: 3 },
 ];
 
 const trustBar = [
@@ -178,8 +200,8 @@ function Index() {
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#shop" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-xs">
-              <ShoppingBag className="h-4 w-4" /> Order Now
+            <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-xs">
+              <MessageCircle className="h-4 w-4" /> Order on WhatsApp
             </a>
             <button onClick={() => setMenuOpen(true)} className="md:hidden p-2" aria-label="Open menu">
               <Menu className="h-6 w-6" />
@@ -230,10 +252,10 @@ function Index() {
               Thin. Crispy. Freshly fried. Authentic banana chips made every day with premium Kerala bananas and time-tested family recipes.
             </p>
             <div data-reveal className="mt-10 flex flex-wrap gap-4">
-              <a href="#shop" className="btn-gold">
-                <ShoppingBag className="h-5 w-5" /> Order Now
+              <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="btn-gold">
+                <MessageCircle className="h-5 w-5" /> Order on WhatsApp
               </a>
-              <a href="#flavours" className="btn-outline-cream">
+              <a href="#shop" className="btn-outline-cream">
                 Explore Flavours <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -314,8 +336,8 @@ function Index() {
                   </div>
 
                   <div className="mt-5 grid grid-cols-2 gap-2">
-                    <button className="rounded-full border-2 border-primary text-primary font-display font-bold text-xs uppercase py-3 hover:bg-primary hover:text-primary-foreground transition-colors">Add to Cart</button>
-                    <button className="rounded-full bg-foreground text-background font-display font-bold text-xs uppercase py-3 hover:bg-primary transition-colors">Quick Buy</button>
+                    <a href={waUrl(p.name)} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-primary text-primary font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary hover:text-primary-foreground transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Enquire</a>
+                    <a href={waUrl(p.name)} target="_blank" rel="noopener noreferrer" className="rounded-full bg-foreground text-background font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Order Now</a>
                   </div>
                 </div>
               </article>
@@ -330,7 +352,7 @@ function Index() {
               </div>
               <div className="mt-6">
                 <div className="text-4xl font-display font-black">₹999 <span className="text-base font-medium opacity-70 line-through">₹1245</span></div>
-                <a href="#" className="mt-5 btn-gold w-full"><ShoppingBag className="h-5 w-5"/> Buy Sampler</a>
+                <a href={waUrl("Mallu Sampler Box — all flavours")} target="_blank" rel="noopener noreferrer" className="mt-5 btn-gold w-full"><MessageCircle className="h-5 w-5"/> Order Sampler on WhatsApp</a>
               </div>
             </article>
           </div>
@@ -558,8 +580,8 @@ function Index() {
             <span className="text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-primary">Questions</span>
             <h2 className="mt-3 text-4xl sm:text-5xl">Frequently<br/>Asked</h2>
             <p className="mt-4 text-muted-foreground">Everything you wanted to know about our chips, freshness, and shipping.</p>
-            <a href="#" className="mt-6 inline-flex items-center gap-2 font-bold text-primary">
-              <MessageCircle className="h-5 w-5" /> Still have a question? Chat with us
+            <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 font-bold text-primary">
+              <MessageCircle className="h-5 w-5" /> Still have a question? Chat on WhatsApp
             </a>
           </div>
           <div className="space-y-3" data-reveal>
@@ -593,9 +615,10 @@ function Index() {
           <p className="mt-6 text-lg sm:text-xl text-primary-foreground/85 max-w-xl mx-auto">
             Experience authentic Kerala snacks delivered fresh to your doorstep. Free shipping on orders over ₹499.
           </p>
-          <a href="#shop" className="mt-10 inline-flex btn-gold !text-base !px-10 !py-5">
-            <ShoppingBag className="h-5 w-5" /> Order Now
+          <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex btn-gold !text-base !px-10 !py-5">
+            <MessageCircle className="h-5 w-5" /> Order on WhatsApp
           </a>
+          <p className="mt-4 text-sm text-primary-foreground/75">or call us at <a href="tel:+919446614038" className="text-gold font-bold">+91 94466 14038</a></p>
         </div>
       </section>
 
@@ -618,7 +641,7 @@ function Index() {
               </form>
             </div>
             {[
-              { t: "Shop", l: ["Classic Salted","Peri Peri","Sweet Jaggery","Sharkara","Masala","Sampler Box"] },
+              { t: "Shop", l: ["Banana Chips","Peri Peri Fries","Made in Jaggery","Sharkara Peratti","Sweet Banana Chips","Jackfruit Chips","Murukku","Achappam","Pakkavada","Kerala Mixture"] },
               { t: "Company", l: ["About Us","Our Story","Contact","Wholesale"] },
               { t: "Help", l: ["Shipping Policy","Refund Policy","Privacy Policy","Terms of Service"] },
             ].map(col => (
@@ -637,17 +660,28 @@ function Index() {
               <a href="#" aria-label="Instagram" className="hover:text-gold"><Instagram className="h-5 w-5"/></a>
               <a href="#" aria-label="Facebook" className="hover:text-gold"><Facebook className="h-5 w-5"/></a>
               <a href="#" aria-label="Youtube" className="hover:text-gold"><Youtube className="h-5 w-5"/></a>
-              <a href="#" aria-label="WhatsApp" className="hover:text-gold"><MessageCircle className="h-5 w-5"/></a>
+              <a href={waUrl()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-gold"><MessageCircle className="h-5 w-5"/></a>
             </div>
           </div>
         </div>
       </footer>
 
+      {/* FLOATING WHATSAPP (desktop) */}
+      <a
+        href={waUrl()}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Order on WhatsApp"
+        className="hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-2 rounded-full bg-[#25D366] text-white pl-4 pr-5 py-3 shadow-xl hover:scale-105 transition-transform font-display font-bold text-sm"
+      >
+        <MessageCircle className="h-5 w-5" /> Order on WhatsApp
+      </a>
+
       {/* MOBILE STICKY BAR */}
       <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-background border-t border-border grid grid-cols-2 gap-2 p-3 shadow-[0_-10px_30px_-15px_rgba(0,0,0,0.2)]">
-        <a href="#shop" className="btn-primary !py-3 !text-xs"><ShoppingBag className="h-4 w-4"/> Order Now</a>
-        <a href="#" className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background py-3 font-display font-bold text-xs uppercase tracking-wider">
-          <MessageCircle className="h-4 w-4"/> WhatsApp
+        <a href="#shop" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary text-primary py-3 font-display font-bold text-xs uppercase tracking-wider"><ShoppingBag className="h-4 w-4"/> Shop</a>
+        <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="btn-primary !py-3 !text-xs">
+          <MessageCircle className="h-4 w-4"/> Order on WhatsApp
         </a>
       </div>
     </div>
