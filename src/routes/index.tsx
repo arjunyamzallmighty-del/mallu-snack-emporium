@@ -21,19 +21,20 @@ import {
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
-import p1 from "@/assets/p1.jpg";
 import p2 from "@/assets/p2.jpg";
-import p3 from "@/assets/p3.jpg";
-import p4 from "@/assets/p4.jpg";
 import p5 from "@/assets/p5.jpg";
 import step from "@/assets/step.jpg";
-import pTomatoMurukku from "@/assets/p_tomato_murukku.jpg";
-import pAchappam from "@/assets/p_achappam.jpg";
-import pMurukku from "@/assets/p_murukku.jpg";
 import pPakkavada from "@/assets/p_pakkavada.jpg";
-import pJackfruit from "@/assets/p_jackfruit.jpg";
-import pSweetBanana from "@/assets/p_sweet_banana.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
+
+const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
+const IMG_JAGGERY = "https://buya1chips.com/cdn/shop/files/2_cfc0bf8e-6449-4af9-845c-9edf7014f9cb.jpg?v=1769254459&width=5000";
+const IMG_SHARKARA = "https://www.sharmispassions.com/wp-content/uploads/2022/08/sharkara-upperi5.jpg";
+const IMG_SWEET_BANANA = "https://mylaporeganapathys.com/wp-content/uploads/2025/05/Banana-Chips-Fruit-Pazham-1.jpg";
+const IMG_JACKFRUIT = "https://nikasu.com/wp-content/uploads/2023/08/Jackfruit-chips.jpg";
+const IMG_TOMATO_MURUKKU = "https://s3.ap-south-1.amazonaws.com/media.florafoods.in/wp-content/uploads/2022/04/24030214/Tomato-Chakli-1.jpg";
+const IMG_MURUKKU = "https://blissfulbitesbytay.com/wp-content/uploads/2021/03/Murukku-Featured-Image.jpg";
+const IMG_ACHAPPAM = "https://weaveskart.com/wp-content/uploads/2023/05/Achappam-Mold-Cake-4.jpg";
 
 const WA_NUMBER = "919446614038";
 const waUrl = (product?: string) => {
