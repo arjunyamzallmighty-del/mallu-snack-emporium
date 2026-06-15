@@ -668,9 +668,9 @@ function Index() {
 
       {/* MOBILE STICKY BAR */}
       <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-background border-t border-border grid grid-cols-2 gap-2 p-3 shadow-[0_-10px_30px_-15px_rgba(0,0,0,0.2)]">
-        <a href="#shop" className="btn-primary !py-3 !text-xs"><ShoppingBag className="h-4 w-4"/> Order Now</a>
-        <a href="#" className="inline-flex items-center justify-center gap-2 rounded-full bg-foreground text-background py-3 font-display font-bold text-xs uppercase tracking-wider">
-          <MessageCircle className="h-4 w-4"/> WhatsApp
+        <a href="#shop" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary text-primary py-3 font-display font-bold text-xs uppercase tracking-wider"><ShoppingBag className="h-4 w-4"/> Shop</a>
+        <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="btn-primary !py-3 !text-xs">
+          <MessageCircle className="h-4 w-4"/> Order on WhatsApp
         </a>
       </div>
     </div>
