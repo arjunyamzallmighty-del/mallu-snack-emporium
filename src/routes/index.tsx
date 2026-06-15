@@ -352,7 +352,7 @@ function Index() {
               </div>
               <div className="mt-6">
                 <div className="text-4xl font-display font-black">₹999 <span className="text-base font-medium opacity-70 line-through">₹1245</span></div>
-                <a href="#" className="mt-5 btn-gold w-full"><ShoppingBag className="h-5 w-5"/> Buy Sampler</a>
+                <a href={waUrl("Mallu Sampler Box — all flavours")} target="_blank" rel="noopener noreferrer" className="mt-5 btn-gold w-full"><MessageCircle className="h-5 w-5"/> Order Sampler on WhatsApp</a>
               </div>
             </article>
           </div>
