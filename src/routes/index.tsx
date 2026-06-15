@@ -666,6 +666,17 @@ function Index() {
         </div>
       </footer>
 
+      {/* FLOATING WHATSAPP (desktop) */}
+      <a
+        href={waUrl()}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Order on WhatsApp"
+        className="hidden sm:inline-flex fixed bottom-6 right-6 z-40 items-center gap-2 rounded-full bg-[#25D366] text-white pl-4 pr-5 py-3 shadow-xl hover:scale-105 transition-transform font-display font-bold text-sm"
+      >
+        <MessageCircle className="h-5 w-5" /> Order on WhatsApp
+      </a>
+
       {/* MOBILE STICKY BAR */}
       <div className="sm:hidden fixed bottom-0 inset-x-0 z-40 bg-background border-t border-border grid grid-cols-2 gap-2 p-3 shadow-[0_-10px_30px_-15px_rgba(0,0,0,0.2)]">
         <a href="#shop" className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary text-primary py-3 font-display font-bold text-xs uppercase tracking-wider"><ShoppingBag className="h-4 w-4"/> Shop</a>
