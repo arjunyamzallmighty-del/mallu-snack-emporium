@@ -615,9 +615,10 @@ function Index() {
           <p className="mt-6 text-lg sm:text-xl text-primary-foreground/85 max-w-xl mx-auto">
             Experience authentic Kerala snacks delivered fresh to your doorstep. Free shipping on orders over ₹499.
           </p>
-          <a href="#shop" className="mt-10 inline-flex btn-gold !text-base !px-10 !py-5">
-            <ShoppingBag className="h-5 w-5" /> Order Now
+          <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="mt-10 inline-flex btn-gold !text-base !px-10 !py-5">
+            <MessageCircle className="h-5 w-5" /> Order on WhatsApp
           </a>
+          <p className="mt-4 text-sm text-primary-foreground/75">or call us at <a href="tel:+919446614038" className="text-gold font-bold">+91 94466 14038</a></p>
         </div>
       </section>
 
