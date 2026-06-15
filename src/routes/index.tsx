@@ -200,8 +200,8 @@ function Index() {
             <a href="#faq" className="hover:text-primary transition-colors">FAQ</a>
           </nav>
           <div className="flex items-center gap-3">
-            <a href="#shop" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-xs">
-              <ShoppingBag className="h-4 w-4" /> Order Now
+            <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="hidden sm:inline-flex btn-primary !py-2.5 !px-5 !text-xs">
+              <MessageCircle className="h-4 w-4" /> Order on WhatsApp
             </a>
             <button onClick={() => setMenuOpen(true)} className="md:hidden p-2" aria-label="Open menu">
               <Menu className="h-6 w-6" />
