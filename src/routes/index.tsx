@@ -252,10 +252,10 @@ function Index() {
               Thin. Crispy. Freshly fried. Authentic banana chips made every day with premium Kerala bananas and time-tested family recipes.
             </p>
             <div data-reveal className="mt-10 flex flex-wrap gap-4">
-              <a href="#shop" className="btn-gold">
-                <ShoppingBag className="h-5 w-5" /> Order Now
+              <a href={waUrl()} target="_blank" rel="noopener noreferrer" className="btn-gold">
+                <MessageCircle className="h-5 w-5" /> Order on WhatsApp
               </a>
-              <a href="#flavours" className="btn-outline-cream">
+              <a href="#shop" className="btn-outline-cream">
                 Explore Flavours <ArrowRight className="h-4 w-4" />
               </a>
             </div>
