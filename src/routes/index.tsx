@@ -641,7 +641,7 @@ function Index() {
               </form>
             </div>
             {[
-              { t: "Shop", l: ["Classic Salted","Peri Peri","Sweet Jaggery","Sharkara","Masala","Sampler Box"] },
+              { t: "Shop", l: ["Banana Chips","Peri Peri Fries","Made in Jaggery","Sharkara Peratti","Sweet Banana Chips","Jackfruit Chips","Murukku","Achappam","Pakkavada","Kerala Mixture"] },
               { t: "Company", l: ["About Us","Our Story","Contact","Wholesale"] },
               { t: "Help", l: ["Shipping Policy","Refund Policy","Privacy Policy","Terms of Service"] },
             ].map(col => (
