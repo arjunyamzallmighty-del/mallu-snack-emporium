@@ -21,10 +21,7 @@ import {
 } from "lucide-react";
 import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
-import p2 from "@/assets/p2.jpg";
-import p5 from "@/assets/p5.jpg";
 import step from "@/assets/step.jpg";
-import pPakkavada from "@/assets/p_pakkavada.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
 
 const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
@@ -35,8 +32,11 @@ const IMG_JACKFRUIT = "https://nikasu.com/wp-content/uploads/2023/08/Jackfruit-c
 const IMG_TOMATO_MURUKKU = "https://s3.ap-south-1.amazonaws.com/media.florafoods.in/wp-content/uploads/2022/04/24030214/Tomato-Chakli-1.jpg";
 const IMG_MURUKKU = "https://blissfulbitesbytay.com/wp-content/uploads/2021/03/Murukku-Featured-Image.jpg";
 const IMG_ACHAPPAM = "https://weaveskart.com/wp-content/uploads/2023/05/Achappam-Mold-Cake-4.jpg";
+const IMG_PAKKAVADA = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbAGPHJOp2Fm6dp1fQaJdY7gCeKHc5MgaxDtjoMRcmnV40QAzUIcb5ciY&s=10";
+const IMG_KERALA_MASALA = "https://rajuphaar.srmd.org/cdn/shop/products/BannerWafer_Banner_1.jpg?v=1673849322";
+const IMG_PERI_PERI = "https://5.imimg.com/data5/SELLER/Default/2026/2/582694107/BG/EE/RJ/153621339/peri-peri-banana-chips.png";
 
-const WA_NUMBER = "919446614038";
+const WA_NUMBER = "9446614038";
 const waUrl = (product?: string) => {
   const msg = product
     ? `Hi Mallu Snacks! I'd like to order: ${product}. Please share availability and delivery details.`
@@ -59,7 +59,7 @@ export const Route = createFileRoute("/")({
 
 const products = [
   { id: 1, name: "Authentic Banana Chips", desc: "Fried fresh in pure Kerala coconut oil", price: 199, mrp: 249, rating: 4.9, reviews: 1284, img: IMG_BANANA_CHIPS, badge: "Best Seller", spice: 1 },
-  { id: 2, name: "Peri Peri Fries", desc: "Smoky, fiery, dangerously addictive", price: 229, mrp: 279, rating: 4.8, reviews: 942, img: p2, badge: "Hot", spice: 4 },
+  { id: 2, name: "Peri Peri Fries", desc: "Smoky, fiery, dangerously addictive", price: 229, mrp: 279, rating: 4.8, reviews: 942, img: IMG_PERI_PERI, badge: "Hot", spice: 4 },
   { id: 3, name: "Made in Jaggery", desc: "Crunchy chips kissed with pure jaggery", price: 219, mrp: 269, rating: 4.9, reviews: 781, img: IMG_JAGGERY, badge: "New", spice: 0 },
   { id: 4, name: "Banana Candy (Sharkara Peratti)", desc: "Glossy jaggery coated heritage bliss", price: 239, mrp: 289, rating: 5.0, reviews: 612, img: IMG_SHARKARA, badge: "Heritage", spice: 0 },
   { id: 5, name: "Sweet Banana Chips", desc: "Caramelised gold, melt-in-mouth crunch", price: 219, mrp: 269, rating: 4.9, reviews: 488, img: IMG_SWEET_BANANA, badge: "Loved", spice: 0 },
@@ -67,9 +67,9 @@ const products = [
   { id: 7, name: "Tomato Murukku", desc: "Tangy tomato spice, perfect spiral crunch", price: 189, mrp: 239, rating: 4.8, reviews: 356, img: IMG_TOMATO_MURUKKU, badge: "Trending", spice: 2 },
   { id: 8, name: "Classic Murukku", desc: "Hand-twisted Kerala tea-time legend", price: 179, mrp: 229, rating: 4.8, reviews: 612, img: IMG_MURUKKU, badge: "Classic", spice: 1 },
   { id: 9, name: "Achappam", desc: "Crisp rose cookies — Kerala festive favourite", price: 199, mrp: 249, rating: 4.9, reviews: 287, img: IMG_ACHAPPAM, badge: "Festive", spice: 0 },
-  { id: 10, name: "Pakkavada", desc: "Crunchy ribbon pakoda with curry leaves", price: 189, mrp: 239, rating: 4.8, reviews: 394, img: pPakkavada, badge: "Tea-time", spice: 2 },
+  { id: 10, name: "Pakkavada", desc: "Crunchy ribbon pakoda with curry leaves", price: 189, mrp: 239, rating: 4.8, reviews: 394, img: IMG_PAKKAVADA, badge: "Tea-time", spice: 2 },
   { id: 11, name: "Kerala Mixture", desc: "The legendary spicy crunchy medley", price: 199, mrp: 249, rating: 4.9, reviews: 728, img: pMixture, badge: "Iconic", spice: 3 },
-  { id: 12, name: "Kerala Masala Chips", desc: "Curry leaves & traditional spice blend", price: 229, mrp: 279, rating: 4.8, reviews: 533, img: p5, badge: "Spicy", spice: 3 },
+  { id: 12, name: "Kerala Masala Chips", desc: "Curry leaves & traditional spice blend", price: 229, mrp: 279, rating: 4.8, reviews: 533, img: IMG_KERALA_MASALA, badge: "Spicy", spice: 3 },
 ];
 
 const trustBar = [
@@ -562,7 +562,7 @@ function Index() {
             </a>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            {[IMG_BANANA_CHIPS,p2,why,IMG_SHARKARA,p5,IMG_JAGGERY].map((img, i) => (
+            {[IMG_BANANA_CHIPS,IMG_PERI_PERI,why,IMG_SHARKARA,IMG_KERALA_MASALA,IMG_JAGGERY].map((img, i) => (
               <a key={i} data-reveal style={{transitionDelay:`${i*40}ms`}} href="#" className={`group relative block overflow-hidden rounded-2xl bg-cream ${i === 0 ? "sm:col-span-2 sm:row-span-2 aspect-square" : "aspect-square"}`}>
                 <img src={img} alt="" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/60 transition-colors flex items-center justify-center">
