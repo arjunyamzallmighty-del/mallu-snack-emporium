@@ -660,7 +660,7 @@ function Index() {
               <a href="#" aria-label="Instagram" className="hover:text-gold"><Instagram className="h-5 w-5"/></a>
               <a href="#" aria-label="Facebook" className="hover:text-gold"><Facebook className="h-5 w-5"/></a>
               <a href="#" aria-label="Youtube" className="hover:text-gold"><Youtube className="h-5 w-5"/></a>
-              <a href="#" aria-label="WhatsApp" className="hover:text-gold"><MessageCircle className="h-5 w-5"/></a>
+              <a href={waUrl()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="hover:text-gold"><MessageCircle className="h-5 w-5"/></a>
             </div>
           </div>
         </div>
