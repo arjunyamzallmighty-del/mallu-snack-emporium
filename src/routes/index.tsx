@@ -336,8 +336,8 @@ function Index() {
                   </div>
 
                   <div className="mt-5 grid grid-cols-2 gap-2">
-                    <button className="rounded-full border-2 border-primary text-primary font-display font-bold text-xs uppercase py-3 hover:bg-primary hover:text-primary-foreground transition-colors">Add to Cart</button>
-                    <button className="rounded-full bg-foreground text-background font-display font-bold text-xs uppercase py-3 hover:bg-primary transition-colors">Quick Buy</button>
+                    <a href={waUrl(p.name)} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-primary text-primary font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary hover:text-primary-foreground transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Enquire</a>
+                    <a href={waUrl(p.name)} target="_blank" rel="noopener noreferrer" className="rounded-full bg-foreground text-background font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Order Now</a>
                   </div>
                 </div>
               </article>
