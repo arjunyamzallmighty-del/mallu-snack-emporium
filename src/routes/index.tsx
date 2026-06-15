@@ -562,7 +562,7 @@ function Index() {
             </a>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
-            {[p1,p2,why,p4,p5,p3].map((img, i) => (
+            {[IMG_BANANA_CHIPS,p2,why,IMG_SHARKARA,p5,IMG_JAGGERY].map((img, i) => (
               <a key={i} data-reveal style={{transitionDelay:`${i*40}ms`}} href="#" className={`group relative block overflow-hidden rounded-2xl bg-cream ${i === 0 ? "sm:col-span-2 sm:row-span-2 aspect-square" : "aspect-square"}`}>
                 <img src={img} alt="" loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/60 transition-colors flex items-center justify-center">
