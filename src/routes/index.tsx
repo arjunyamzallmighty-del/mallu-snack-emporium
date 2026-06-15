@@ -36,7 +36,7 @@ const IMG_PAKKAVADA = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbA
 const IMG_KERALA_MASALA = "https://rajuphaar.srmd.org/cdn/shop/products/BannerWafer_Banner_1.jpg?v=1673849322";
 const IMG_PERI_PERI = "https://5.imimg.com/data5/SELLER/Default/2026/2/582694107/BG/EE/RJ/153621339/peri-peri-banana-chips.png";
 
-const WA_NUMBER = "9446614038";
+const WA_NUMBER = "919446614038";
 const waUrl = (product?: string) => {
   const msg = product
     ? `Hi Mallu Snacks! I'd like to order: ${product}. Please share availability and delivery details.`
