@@ -23,6 +23,7 @@ import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
 import step from "@/assets/step.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
+import logoVerticalAsset from "@/assets/logo-vertical.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 
 const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
@@ -625,13 +626,7 @@ function Index() {
         <div className="container-x">
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-2">
-                <div className="grid h-10 w-10 place-items-center rounded-full bg-primary text-primary-foreground font-display font-black">M</div>
-                <div className="leading-tight">
-                  <div className="font-display font-black text-lg">MALLU SNACKS</div>
-                  <div className="text-[10px] font-semibold text-gold uppercase tracking-[0.2em] -mt-0.5">Kerala's Favourite Crunch</div>
-                </div>
-              </div>
+              <img src={logoVerticalAsset.url} alt="Mallu Snacks — Authentic Kerala Snacks" className="h-24 w-auto mb-2" />
               <p className="mt-5 text-background/70 max-w-sm">Authentic Kerala banana chips, freshly fried and delivered across India. Made with love in Kochi.</p>
               <form className="mt-6 flex max-w-sm">
                 <input type="email" required placeholder="Your email" className="flex-1 rounded-l-full bg-background/10 border border-background/20 px-5 py-3 text-sm placeholder:text-background/50 focus:outline-none focus:border-gold" />
