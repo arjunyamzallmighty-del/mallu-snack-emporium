@@ -178,6 +178,9 @@ function Index() {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const [reviewIdx, setReviewIdx] = useState(0);
+  const [weights, setWeights] = useState<Record<number, number>>(() =>
+    Object.fromEntries(products.map((p) => [p.id, 1])),
+  );
 
   useEffect(() => {
     const id = setInterval(() => setReviewIdx((i) => (i + 1) % reviews.length), 5000);
