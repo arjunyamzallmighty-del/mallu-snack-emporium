@@ -23,6 +23,7 @@ import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
 import step from "@/assets/step.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 
 const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
 const IMG_JAGGERY = "https://buya1chips.com/cdn/shop/files/2_cfc0bf8e-6449-4af9-845c-9edf7014f9cb.jpg?v=1769254459&width=5000";
@@ -187,11 +188,7 @@ function Index() {
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container-x flex items-center justify-between h-16 sm:h-20">
           <a href="#top" className="flex items-center gap-2">
-            <div className="grid h-10 w-10 place-items-center rounded-full bg-primary text-primary-foreground font-display font-black">M</div>
-            <div className="leading-tight">
-              <div className="font-display font-black tracking-tight text-base sm:text-lg">MALLU</div>
-              <div className="text-[10px] sm:text-xs font-semibold text-primary uppercase tracking-[0.2em] -mt-0.5">Snacks</div>
-            </div>
+            <img src={logoAsset.url} alt="Mallu Snacks — Authentic Kerala Snacks" className="h-10 sm:h-14 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
             <a href="#shop" className="hover:text-primary transition-colors">Shop</a>
@@ -212,7 +209,7 @@ function Index() {
         {menuOpen && (
           <div className="fixed inset-0 z-50 bg-background flex flex-col p-6 md:hidden">
             <div className="flex justify-between items-center mb-10">
-              <span className="font-display font-black text-xl">MALLU</span>
+              <img src={logoAsset.url} alt="Mallu Snacks" className="h-10 w-auto" />
               <button onClick={() => setMenuOpen(false)} aria-label="Close"><X className="h-7 w-7" /></button>
             </div>
             <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
