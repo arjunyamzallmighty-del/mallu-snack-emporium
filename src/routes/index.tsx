@@ -60,18 +60,25 @@ export const Route = createFileRoute("/")({
 });
 
 const products = [
-  { id: 1, name: "Authentic Banana Chips", desc: "Fried fresh in pure Kerala coconut oil", price: 199, mrp: 249, rating: 4.9, reviews: 1284, img: IMG_BANANA_CHIPS, badge: "Best Seller", spice: 1 },
-  { id: 2, name: "Peri Peri Fries", desc: "Smoky, fiery, dangerously addictive", price: 229, mrp: 279, rating: 4.8, reviews: 942, img: IMG_PERI_PERI, badge: "Hot", spice: 4 },
-  { id: 3, name: "Made in Jaggery", desc: "Crunchy chips kissed with pure jaggery", price: 219, mrp: 269, rating: 4.9, reviews: 781, img: IMG_JAGGERY, badge: "New", spice: 0 },
-  { id: 4, name: "Banana Candy (Sharkara Peratti)", desc: "Glossy jaggery coated heritage bliss", price: 239, mrp: 289, rating: 5.0, reviews: 612, img: IMG_SHARKARA, badge: "Heritage", spice: 0 },
-  { id: 5, name: "Sweet Banana Chips", desc: "Caramelised gold, melt-in-mouth crunch", price: 219, mrp: 269, rating: 4.9, reviews: 488, img: IMG_SWEET_BANANA, badge: "Loved", spice: 0 },
-  { id: 6, name: "Jackfruit Chips", desc: "Wild jackfruit, golden & gloriously crisp", price: 259, mrp: 319, rating: 4.9, reviews: 421, img: IMG_JACKFRUIT, badge: "Premium", spice: 0 },
-  { id: 7, name: "Tomato Murukku", desc: "Tangy tomato spice, perfect spiral crunch", price: 189, mrp: 239, rating: 4.8, reviews: 356, img: IMG_TOMATO_MURUKKU, badge: "Trending", spice: 2 },
-  { id: 8, name: "Classic Murukku", desc: "Hand-twisted Kerala tea-time legend", price: 179, mrp: 229, rating: 4.8, reviews: 612, img: IMG_MURUKKU, badge: "Classic", spice: 1 },
-  { id: 9, name: "Achappam", desc: "Crisp rose cookies — Kerala festive favourite", price: 199, mrp: 249, rating: 4.9, reviews: 287, img: IMG_ACHAPPAM, badge: "Festive", spice: 0 },
-  { id: 10, name: "Pakkavada", desc: "Crunchy ribbon pakoda with curry leaves", price: 189, mrp: 239, rating: 4.8, reviews: 394, img: IMG_PAKKAVADA, badge: "Tea-time", spice: 2 },
-  { id: 11, name: "Kerala Mixture", desc: "The legendary spicy crunchy medley", price: 199, mrp: 249, rating: 4.9, reviews: 728, img: pMixture, badge: "Iconic", spice: 3 },
-  { id: 12, name: "Kerala Masala Chips", desc: "Curry leaves & traditional spice blend", price: 229, mrp: 279, rating: 4.8, reviews: 533, img: IMG_KERALA_MASALA, badge: "Spicy", spice: 3 },
+  { id: 1, name: "Authentic Banana Chips", desc: "Fried fresh in pure Kerala coconut oil", pricePerKg: 400, mrpPerKg: 480, rating: 4.9, reviews: 1284, img: IMG_BANANA_CHIPS, badge: "Best Seller", spice: 1 },
+  { id: 2, name: "Peri Peri Potato", desc: "Smoky, fiery, dangerously addictive", pricePerKg: 400, mrpPerKg: 480, rating: 4.8, reviews: 942, img: IMG_PERI_PERI, badge: "Hot", spice: 4 },
+  { id: 3, name: "Chips in Ghee (Enna)", desc: "Crunchy chips kissed with pure ghee", pricePerKg: 440, mrpPerKg: 520, rating: 4.9, reviews: 781, img: IMG_JAGGERY, badge: "Premium", spice: 0 },
+  { id: 4, name: "Banana Candy (Sharkara Peratti)", desc: "Glossy jaggery coated heritage bliss", pricePerKg: 440, mrpPerKg: 520, rating: 5.0, reviews: 612, img: IMG_SHARKARA, badge: "Heritage", spice: 0 },
+  { id: 5, name: "Sweet Banana Chips (Oil)", desc: "Caramelised gold, melt-in-mouth crunch", pricePerKg: 320, mrpPerKg: 400, rating: 4.9, reviews: 488, img: IMG_SWEET_BANANA, badge: "Loved", spice: 0 },
+  { id: 6, name: "Jackfruit Chips (Chakka)", desc: "Wild jackfruit, golden & gloriously crisp", pricePerKg: 400, mrpPerKg: 480, rating: 4.9, reviews: 421, img: IMG_JACKFRUIT, badge: "Premium", spice: 0 },
+  { id: 7, name: "Tomato Murukku", desc: "Tangy tomato spice, perfect spiral crunch", pricePerKg: 240, mrpPerKg: 300, rating: 4.8, reviews: 356, img: IMG_TOMATO_MURUKKU, badge: "Trending", spice: 2 },
+  { id: 8, name: "Cornflakes Mixture", desc: "Crisp cornflakes tossed with Kerala spice", pricePerKg: 200, mrpPerKg: 260, rating: 4.8, reviews: 612, img: IMG_MURUKKU, badge: "Classic", spice: 1 },
+  { id: 9, name: "Kapalandi (Peanut) Roast", desc: "Slow-roasted peanuts, masala perfection", pricePerKg: 300, mrpPerKg: 360, rating: 4.9, reviews: 287, img: IMG_ACHAPPAM, badge: "Festive", spice: 1 },
+  { id: 10, name: "Pakkavada", desc: "Crunchy ribbon pakoda with curry leaves", pricePerKg: 200, mrpPerKg: 260, rating: 4.8, reviews: 394, img: IMG_PAKKAVADA, badge: "Tea-time", spice: 2 },
+  { id: 11, name: "Mixture (All Type)", desc: "The legendary spicy crunchy medley", pricePerKg: 240, mrpPerKg: 300, rating: 4.9, reviews: 728, img: pMixture, badge: "Iconic", spice: 3 },
+  { id: 12, name: "Kappa Chips (Tapioca, Oil)", desc: "Curry leaves & traditional spice blend", pricePerKg: 240, mrpPerKg: 300, rating: 4.8, reviews: 533, img: IMG_KERALA_MASALA, badge: "Spicy", spice: 3 },
+];
+
+const weightOptions = [
+  { label: "200g", value: 0.2 },
+  { label: "500g", value: 0.5 },
+  { label: "750g", value: 0.75 },
+  { label: "1kg", value: 1 },
 ];
 
 const trustBar = [
