@@ -23,6 +23,7 @@ import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
 import step from "@/assets/step.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
+import logoVerticalAsset from "@/assets/logo-vertical.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 
 const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
