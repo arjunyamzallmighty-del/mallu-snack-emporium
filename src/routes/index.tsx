@@ -336,18 +336,49 @@ function Index() {
                     </div>
                   )}
 
-                  <div className="mt-5 flex items-end justify-between">
-                    <div>
-                      <span className="font-display font-black text-2xl text-foreground">₹{p.price}</span>
-                      <span className="ml-2 text-sm text-muted-foreground line-through">₹{p.mrp}</span>
-                    </div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Save ₹{p.mrp - p.price}</span>
-                  </div>
+                  {(() => {
+                    const w = weights[p.id] ?? 1;
+                    const wLabel = weightOptions.find((o) => o.value === w)?.label ?? "1kg";
+                    const price = Math.round(p.pricePerKg * w);
+                    const mrp = Math.round(p.mrpPerKg * w);
+                    return (
+                      <>
+                        <div className="mt-5">
+                          <div className="text-[10px] font-bold uppercase tracking-wider text-muted-foreground mb-2">Select weight</div>
+                          <div className="grid grid-cols-4 gap-1.5">
+                            {weightOptions.map((o) => (
+                              <button
+                                key={o.value}
+                                type="button"
+                                onClick={() => setWeights((s) => ({ ...s, [p.id]: o.value }))}
+                                className={`rounded-full border text-[11px] font-bold uppercase tracking-wider py-1.5 transition-colors ${
+                                  w === o.value
+                                    ? "bg-primary text-primary-foreground border-primary"
+                                    : "bg-background text-foreground border-border hover:border-primary"
+                                }`}
+                              >
+                                {o.label}
+                              </button>
+                            ))}
+                          </div>
+                        </div>
 
-                  <div className="mt-5 grid grid-cols-2 gap-2">
-                    <a href={waUrl(p.name)} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-primary text-primary font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary hover:text-primary-foreground transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Enquire</a>
-                    <a href={waUrl(p.name)} target="_blank" rel="noopener noreferrer" className="rounded-full bg-foreground text-background font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Order Now</a>
-                  </div>
+                        <div className="mt-4 flex items-end justify-between">
+                          <div>
+                            <span className="font-display font-black text-2xl text-foreground">₹{price}</span>
+                            <span className="ml-2 text-sm text-muted-foreground line-through">₹{mrp}</span>
+                            <div className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground mt-0.5">for {wLabel} · ₹{p.pricePerKg}/kg</div>
+                          </div>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-primary">Save ₹{mrp - price}</span>
+                        </div>
+
+                        <div className="mt-5 grid grid-cols-2 gap-2">
+                          <a href={waUrl(`${p.name} (${wLabel})`)} target="_blank" rel="noopener noreferrer" className="rounded-full border-2 border-primary text-primary font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary hover:text-primary-foreground transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Enquire</a>
+                          <a href={waUrl(`${p.name} (${wLabel}) — ₹${price}`)} target="_blank" rel="noopener noreferrer" className="rounded-full bg-foreground text-background font-display font-bold text-xs uppercase py-3 text-center hover:bg-primary transition-colors inline-flex items-center justify-center gap-1.5"><MessageCircle className="h-4 w-4"/> Order Now</a>
+                        </div>
+                      </>
+                    );
+                  })()}
                 </div>
               </article>
             ))}
