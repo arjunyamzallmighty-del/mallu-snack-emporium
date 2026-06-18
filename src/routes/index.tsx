@@ -23,6 +23,7 @@ import hero from "@/assets/hero.jpg";
 import why from "@/assets/why.jpg";
 import step from "@/assets/step.jpg";
 import pMixture from "@/assets/p_mixture.jpg";
+import logoAsset from "@/assets/mallu-logo.png.asset.json";
 
 const IMG_BANANA_CHIPS = "https://www.funfoodfrolic.com/wp-content/uploads/2023/01/Banana-Chips-Blog.jpg";
 const IMG_JAGGERY = "https://buya1chips.com/cdn/shop/files/2_cfc0bf8e-6449-4af9-845c-9edf7014f9cb.jpg?v=1769254459&width=5000";
