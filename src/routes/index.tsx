@@ -187,12 +187,8 @@ function Index() {
       {/* NAV */}
       <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
         <div className="container-x flex items-center justify-between h-16 sm:h-20">
-          <a href="#top" className="flex items-center gap-2">
-            <div className="grid h-10 w-10 place-items-center rounded-full bg-primary text-primary-foreground font-display font-black">M</div>
-            <div className="leading-tight">
-              <div className="font-display font-black tracking-tight text-base sm:text-lg">MALLU</div>
-              <div className="text-[10px] sm:text-xs font-semibold text-primary uppercase tracking-[0.2em] -mt-0.5">Snacks</div>
-            </div>
+          <a href="#top" className="flex items-center">
+            <img src={logoAsset.url} alt="Mallu Snacks" className="h-10 sm:h-12 w-auto object-contain" />
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
             <a href="#shop" className="hover:text-primary transition-colors">Shop</a>
@@ -629,12 +625,8 @@ function Index() {
         <div className="container-x">
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-10">
             <div className="lg:col-span-2">
-              <div className="flex items-center gap-2">
-                <div className="grid h-10 w-10 place-items-center rounded-full bg-primary text-primary-foreground font-display font-black">M</div>
-                <div className="leading-tight">
-                  <div className="font-display font-black text-lg">MALLU SNACKS</div>
-                  <div className="text-[10px] font-semibold text-gold uppercase tracking-[0.2em] -mt-0.5">Kerala's Favourite Crunch</div>
-                </div>
+              <div className="flex items-center">
+                <img src={logoAsset.url} alt="Mallu Snacks" className="h-12 w-auto object-contain" />
               </div>
               <p className="mt-5 text-background/70 max-w-sm">Authentic Kerala banana chips, freshly fried and delivered across India. Made with love in Kochi.</p>
               <form className="mt-6 flex max-w-sm">
