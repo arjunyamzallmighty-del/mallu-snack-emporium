@@ -209,7 +209,7 @@ function Index() {
         {menuOpen && (
           <div className="fixed inset-0 z-50 bg-background flex flex-col p-6 md:hidden">
             <div className="flex justify-between items-center mb-10">
-              <span className="font-display font-black text-xl">MALLU</span>
+              <img src={logoAsset.url} alt="Mallu Snacks" className="h-10 w-auto" />
               <button onClick={() => setMenuOpen(false)} aria-label="Close"><X className="h-7 w-7" /></button>
             </div>
             <nav className="flex flex-col gap-6 text-2xl font-display font-bold">
